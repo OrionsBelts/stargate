@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: # TODO(mperrotte): fill this out (leverage docker hub)
+    tag: latest
+
+params:
+  REPO_NAME: stargate
+
+inputs:
+ - name: stargate
+
+run:
+  path: stargate/ci/tasks/test/task-test.sh
